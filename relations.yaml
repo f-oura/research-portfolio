@@ -1,0 +1,10 @@
+schema_version: 1
+relations: []
+# 実在の依存を確認した時だけ追加する。ID は registry の project ID を使う。
+# - id: REL-001
+#   producer: producer-project-id
+#   consumer: consumer-project-id
+#   deliverable: 受け渡す成果
+#   unlocks: その成果で可能になる判断や作業
+#   status: PROVISIONAL
+#   evidence: [{project: producer-project-id, commit: UNBOUND, path: UNBOUND}]

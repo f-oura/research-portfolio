@@ -1,0 +1,8 @@
+# Local configuration and disposable derived records
+.local/
+generated/
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*

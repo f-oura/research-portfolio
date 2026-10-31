@@ -1,0 +1,27 @@
+schema_version: 1
+# Portfolio 独自の参照登録形式。Project OS の project.yaml/profile の代替ではない。
+# relative paths は portfolio root 基準。別配置では .local/ に機械固有の locator を置く。
+project_os:
+  repository: https://github.com/f-oura/research-project-os
+  reviewed_revision: 97062125c64005a85f5f70ecb5cf358279408c3c
+  checkout_hint: ../skills/research-project-os
+projects:
+  - id: amaneq-receiver
+    repository: https://github.com/f-oura/amaneq-b2tt-receiver
+    checkout_hint: ../jparc-saphire/daq/amaneq-receiver
+    integration:
+      mode: mapped
+      profile: profiles/amaneq-receiver.yaml
+      profile_base: project_os_reviewed_revision
+    # 未監査。profile の存在と、対象 project の全記録の適合は別。
+    compatibility: NOT_CHECKED
+    portfolio_role: UNBOUND
+# 標準構成の追加例（実在する project を確認してから登録）:
+# - id: your-project-id
+#   repository: UNBOUND
+#   checkout_hint: UNBOUND
+#   integration:
+#     mode: native
+#     profile: null
+#   compatibility: NOT_CHECKED
+#   portfolio_role: UNBOUND
