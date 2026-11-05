@@ -31,5 +31,12 @@
 - `decisions/`, `reviews/`: 判断と日付付きの観測履歴。
 - `generated/`: 必要時に作る派生物。Git 対象外。
 
-初期状態では amaneq-receiver の接続情報だけ登録済み。研究の優先順位・予算・期限は未設定。
+`highp-program` を実験単位の管理入口として登録済み。
+そのmember registryに `e88daq-dev`、`highp-ana-dev`、`highp-online-ana-dev`、`amaneq-receiver` を登録している。
+従来のamaneq-receiverの接続情報はhighp-programへ移管し、安定IDと既存profileを保持した。
+研究の優先順位・予算・期限は未設定。
+
+program登録はProject OSの個別projectとは異なる。registryの `checkout_hint` はこのrepo root基準、
+`member_registry` は参照先programのroot基準で解決する。そこで対象projectを選び、その規則と正本を読む。
+この階層は所属を表し、`relations.yaml` の技術的依存とは別。最上位がすべての子の進捗を複製する必要はない。
 共有前に、参照先の共同研究の共有範囲を確認する。
