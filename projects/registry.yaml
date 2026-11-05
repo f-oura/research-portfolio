@@ -9,10 +9,9 @@ project_os:
 projects:
   - id: highp-program
     kind: program
-    repository: UNBOUND
-    planned_repository: https://github.com/f-oura/highp-program
-    requested_visibility: private
-    remote_status: PENDING_CREATION
+    repository: https://github.com/f-oura/highp-program
+    visibility: private
+    visibility_source: user-confirmed-2026-11-05
     checkout_hint: ../highp-program
     entrypoint: README.md
     member_registry: projects/registry.yaml
